@@ -1,4 +1,9 @@
+import { useCart } from "../../context/ProductContext";
+
 const ProductCard = ({ product }) => {
+  const { addToCart, cart, itemAmount } = useCart();
+  console.log(itemAmount);
+  console.log(cart);
   return (
     <div className="max-w-md mx-auto bg-white rounded-xl overflow-hidden shadow-md">
       <img
@@ -17,7 +22,13 @@ const ProductCard = ({ product }) => {
           <span className="text-gray-500">
             Rating: {product.rating.rate} ({product.rating.count} reviews)
           </span>
-          <button className=" bg-zinc-300 ">Add to Cart</button>
+
+          <button
+            onClick={() => addToCart(product, product.id)}
+            className=" bg-zinc-300 "
+          >
+            Add to Cart
+          </button>
         </div>
       </div>
     </div>
