@@ -16,6 +16,7 @@ import Header from "./components/HomeComp/Header";
 import Footer from "./components/Footer";
 import CartProvider from "./context/ProductContext";
 import bgImage from "../src/assets/bgimage.jpg";
+import FilterProvider from "./context/FilterContext";
 
 // const router = createBrowserRouter([
 //   {
@@ -39,24 +40,26 @@ import bgImage from "../src/assets/bgimage.jpg";
 const App = () => {
   return (
     <>
-      <CartProvider>
-        <Router>
-          {/* <RouterProvider router={router} />;
-           */}
+      <FilterProvider>
+        <CartProvider>
+          <Router>
+            {/* <RouterProvider router={router} />;
+             */}
 
-          <Header />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/category/:categoryId" element={<CategoryPage />} />
-            <Route
-              path="/product/:productId"
-              element={<ProductDetailsPage />}
-            />
-            <Route path="/cart" element={<CartPage />} />
-          </Routes>
-          <Footer />
-        </Router>
-      </CartProvider>
+            <Header />
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/category/:categoryId" element={<CategoryPage />} />
+              <Route
+                path="/product/:productId"
+                element={<ProductDetailsPage />}
+              />
+              <Route path="/cart" element={<CartPage />} />
+            </Routes>
+            <Footer />
+          </Router>
+        </CartProvider>
+      </FilterProvider>
     </>
   );
 };
