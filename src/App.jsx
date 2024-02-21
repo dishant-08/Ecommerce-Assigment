@@ -15,6 +15,7 @@ import CartPage from "./pages/CartPage";
 import Header from "./components/HomeComp/Header";
 import Footer from "./components/Footer";
 import CartProvider from "./context/ProductContext";
+import bgImage from "../src/assets/bgimage.jpg";
 
 // const router = createBrowserRouter([
 //   {
@@ -42,6 +43,7 @@ const App = () => {
         <Router>
           {/* <RouterProvider router={router} />;
            */}
+
           <Header />
           <Routes>
             <Route path="/" element={<Home />} />

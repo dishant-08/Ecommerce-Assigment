@@ -9,6 +9,8 @@ export default {
         white: "#fff",
         black: " #212529",
         helper: "#8490ff",
+        bgimage: "#ffd278ff",
+        bgdarkimage: "#ffae00ff",
 
         bg: "#FEF6F6",
         footer_bg: "#201D1D",
