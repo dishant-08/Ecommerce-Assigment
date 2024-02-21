@@ -18,7 +18,7 @@ const ProductDetailsPage = () => {
 
   return (
     <section className="overflow-hidden bg-white py-11 font-poppins dark:bg-gray-800">
-      <div className="max-w-6xl px-4 py-4 mx-auto lg:py-8 md:px-6">
+      <div className="max-w-4xl px-4 py-4 mx-auto lg:py-8 md:px-6">
         <div className="flex flex-wrap -mx-4">
           <div className="w-full px-4 md:w-1/2 ">
             <div className="sticky top-0 z-50 overflow-hidden ">
@@ -87,7 +87,7 @@ const ProductDetailsPage = () => {
                 <span className="text-lg font-medium text-rose-500 dark:text-rose-200">
                   {product[0].category}
                 </span>
-                <h2 className="max-w-xl mt-2 mb-6 text-2xl font-bold dark:text-gray-400 md:text-4xl">
+                <h2 className="max-w-xl mt-2 mb-6 text-xl font-bold dark:text-gray-400 md:text-4xl">
                   {product[0].title}
                 </h2>
                 <div className="flex items-center mb-6">
@@ -157,15 +157,17 @@ const ProductDetailsPage = () => {
                 <p className="max-w-md mb-8 text-gray-700 dark:text-gray-400">
                   {product[0].description}
                 </p>
-                <p className="inline-block mb-8 text-4xl font-bold text-gray-700 dark:text-gray-400 ">
-                  <span>$ {discountedPrice}</span>
-                  <span className="text-base font-normal text-gray-500 mx-1 line-through dark:text-gray-400">
-                    $ {originalPrice}
-                  </span>
-                </p>
-                <p className="text-green-600 dark:text-green-300 ">
-                  {discountPercentage}% off
-                </p>
+                <div className="flex items-center   ">
+                  <p className="inline-block  text-4xl font-bold text-gray-700 dark:text-gray-400 ">
+                    <span>$ {discountedPrice}</span>
+                    <span className="text-base font-normal text-gray-500 mx-1 line-through dark:text-gray-400">
+                      $ {originalPrice}
+                    </span>
+                  </p>
+                  <p className="text-green-600 dark:text-green-300 ">
+                    {discountPercentage}% off
+                  </p>
+                </div>
               </div>
               {/* <div className="flex items-center mb-8">
                 <h2 className="w-16 mr-6 text-xl font-bold dark:text-gray-400">

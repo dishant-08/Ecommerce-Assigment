@@ -1,7 +1,7 @@
 const CategoryCard = ({ category }) => {
   return (
     <div
-      className="max-w-xl mx-10 overflow-hidden bg-bgimage  shadow-md  shadow-slate-600  rounded-lg  transform transition-transform duration-300 hover:scale-110"
+      className=" w-[23rem] mx-10 overflow-hidden bg-bgimage  shadow-md  shadow-slate-600  rounded-lg  transform transition-transform duration-300 hover:scale-110"
       style={{
         perspective: "1000px",
         transformStyle: "preserve-3d",
@@ -9,7 +9,7 @@ const CategoryCard = ({ category }) => {
     >
       {/* <div className="flex justify-center items-center"> */}
       <img
-        className="w-full h-80   object-cover object-center"
+        className="w-full h-72   object-cover object-center"
         src={category.image}
         alt={category.name}
       />

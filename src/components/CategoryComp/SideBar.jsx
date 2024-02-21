@@ -19,7 +19,7 @@ export const AccordionItem = ({ title, content, index }) => {
     <div className="relative mb-3" key={index}>
       <h6 className="mb-0">
         <button
-          className="relative flex items-center w-full p-4 font-semibold text-left transition-all ease-in border-b border-solid cursor-pointer border-slate-100 text-slate-700 rounded-t-1 group text-dark-500"
+          className="relative text-[1.3rem] flex items-center w-full p-4 font-semibold text-left transition-all ease-in border-b border-solid cursor-pointer border-slate-100 text-slate-700 rounded-t-1 group text-dark-500"
           onClick={toggleAccordion}
         >
           <span>{title}</span>
@@ -32,7 +32,7 @@ export const AccordionItem = ({ title, content, index }) => {
       <div
         className={`${
           isOpen ? "block" : "hidden"
-        }  overflow-hidden transition-all duration-300 ease-in-out`}
+        }  overflow-hidden text-xl transition-all duration-300 ease-in-out`}
       >
         {content}
       </div>
@@ -83,7 +83,7 @@ const SideBar = () => {
             {categories.map((product) => (
               <Link
                 key={product.id}
-                className="flex flex-col items-center p-1 text-xl border"
+                className="flex flex-col items-center text-left "
                 to={`/category/${product.name.toLowerCase()}`}
               >
                 {product.name}
@@ -106,7 +106,7 @@ const SideBar = () => {
                   checked={filters.rating === item}
                   onChange={() => handleRatingChange(item)}
                 />
-                <div className="flex items-center my-1 ">
+                <div className="flex items-center  my-1 ">
                   <span>{Star(item, true)} </span>
                   <span>& Up</span>
                 </div>
@@ -119,7 +119,7 @@ const SideBar = () => {
       <AccordionItem
         title=" Filter "
         content={
-          <div className=" flex  flex-col  items-center p-1 text-xl ">
+          <div className=" flex  flex-col justify-center  items-center p-1 text-xl ">
             <div
               onClick={() => {
                 ascSort();
@@ -130,8 +130,8 @@ const SideBar = () => {
                   popularDesc: false,
                 });
               }}
-              className={`px-4 py-1 text-xl font-semibold  ${
-                sort.priceAsc ? "bg-red-500 text-white" : ""
+              className={`px-4 py-1 text-xl   ${
+                sort.priceAsc ? "bg-red-500 font-semibold text-white" : ""
               }  text-blue-gray-500/80 `}
             >
               Price (Low to High)
@@ -146,11 +146,11 @@ const SideBar = () => {
                   popularDesc: false,
                 });
               }}
-              className={`px-4 py-1 text-xl font-semibold  ${
-                sort.priceDesc ? "bg-red-500 text-white" : ""
+              className={`px-4 py-1 text-xl   ${
+                sort.priceAsc ? "bg-red-500 font-semibold text-white" : ""
               }  text-blue-gray-500/80 `}
             >
-              Price ( High to Low)
+              Price (High to Low)
             </div>
             <div
               onClick={() => {
@@ -162,11 +162,11 @@ const SideBar = () => {
                   popularDesc: false,
                 });
               }}
-              className={`px-4 py-1 text-xl font-semibold  ${
-                sort.popularAsc ? "bg-red-500 text-white" : ""
-              }  text-blue-gray-500/80 `}
+              className={`px-4 py-1 text-xl   ${
+                sort.priceAsc ? "bg-red-500  font-semibold text-white" : ""
+              }  text-blue-gray-500/80  `}
             >
-              Popularity ( Low to High)
+              Popularity (Low to High)
             </div>
             <div
               onClick={() => {
@@ -178,11 +178,11 @@ const SideBar = () => {
                   popularDesc: true,
                 });
               }}
-              className={`px-4 py-1 text-xl font-semibold  ${
-                sort.popularDesc ? "bg-red-500 text-white" : ""
+              className={`px-4 py-1 text-xl   ${
+                sort.priceAsc ? "bg-red-500 font-semibold text-white" : ""
               }  text-blue-gray-500/80 `}
             >
-              Popularity ( High to Low)
+              Popularity (High to Low)
             </div>
           </div>
         }
@@ -193,7 +193,7 @@ const SideBar = () => {
         content={
           <div className="flex flex-col items-center p-1 text-xl">
             {priceOptions.map((price, index) => (
-              <label key={index}>
+              <label className=" my-0.5 " key={index}>
                 <input
                   type="radio"
                   name="price"

@@ -90,6 +90,7 @@ const CartProvider = ({ children }) => {
         total,
         addToCart,
         cart,
+        setCart,
         removeFromCart,
         clearCart,
         increaseAmount,

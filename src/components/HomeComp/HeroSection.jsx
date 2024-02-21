@@ -35,12 +35,7 @@ const HeroSection = ({ mydata }) => {
         src={bgImage}
         alt="Background Image"
       />
-      <p className=" text-black flex justify-center items-center ">
-        {/* Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias atque
-        temporibus veniam doloribus libero ad error omnis voluptates animi!
-        Suscipit sapiente. */}
-        {/* <TypewriterEffect /> */}
-        {/* <TypewriterEffectSmooth /> */}
+      <p className=" text-black flex justify-end items-start p-[10%] h-screen  ">
         <AnimatedTextCharacter text="Welcome! to Ecommerce Project" />
       </p>
 
@@ -52,7 +47,7 @@ const HeroSection = ({ mydata }) => {
         />
       </div>
     </div>
-    // <section className="pt-16 px-10 md:px-0 mt-8">
+    // <section className="pt-16 px-10 md:px-0 mt-8"> Curated Collections for the Modern You.
     //   <div className="container mx-auto">
     //     <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
     //       <div className="hero-section-data font-semibold text-3xl ">

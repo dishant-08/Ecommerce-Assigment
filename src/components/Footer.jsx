@@ -20,7 +20,7 @@ const Footer = () => {
         <div className="mx-auto flex flex-col md:flex-row text-center place-content-center gap-8">
           <div>
             <h3 className="text-4xl">Ready to get started?</h3>
-            <h3 className="text-2xl">Let's talk today</h3>
+            <h3 className="text-xl">Let's talk today</h3>
           </div>
           <div className="self-center">
             <Button>Get Started</Button>
@@ -29,19 +29,17 @@ const Footer = () => {
       </section>
 
       {/* Footer */}
-      <footer className="md:py-16 text-2xl">
+      <footer className="md:py-16 text-xl">
         <div className="px-8 my-10 text-center place-content-center grid grid-cols-4 gap-10">
           <div className="col-span-4 md:col-span-1">
-            <h3 className="text-2xl mb-4">E-store</h3>
+            <h3 className="text-xl mb-4">E-store</h3>
             <p className="text-xl">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit.
             </p>
           </div>
 
           <div className="col-span-4 md:col-span-1">
-            <h3 className="text-2xl mb-4">
-              Subscribe to get important updates
-            </h3>
+            <h3 className="text-xl mb-4">Subscribe to get important updates</h3>
             <form className="flex flex-col items-center  gap-2">
               <input
                 type="email"
@@ -53,7 +51,7 @@ const Footer = () => {
                 <input
                   type="submit"
                   value="Subscribe"
-                  className="bg-btn text-2xl px-4 py-1 text-white cursor-not-allowed"
+                  className="bg-btn text-xl px-4 py-1 text-white cursor-not-allowed"
                   disabled
                 />
               </div>
@@ -61,25 +59,25 @@ const Footer = () => {
           </div>
 
           <div className="col-span-4 md:col-span-1">
-            <h3 className="text-2xl mb-4">Follow</h3>
+            <h3 className="text-xl mb-4">Follow</h3>
             <div className="flex justify-center gap-2">
               <SocialLink
                 href="https://instagram.com/"
-                icon={<FaInstagram className="text-white text-2xl" />}
+                icon={<FaInstagram className="text-white text-xl" />}
               />
               <SocialLink
                 href="https://youtube.com/"
-                icon={<FaYoutube className="text-white text-2xl" />}
+                icon={<FaYoutube className="text-white text-xl" />}
               />
               <SocialLink
                 href="https://github.com/"
-                icon={<FaGithub className="text-white text-2xl" />}
+                icon={<FaGithub className="text-white text-xl" />}
               />
             </div>
           </div>
 
           <div className="col-span-4 md:col-span-1">
-            <h3 className="text-2xltext-xl mb-4">Call Us</h3>
+            <h3 className="text-xltext-xl mb-4">Call Us</h3>
             <a href="tel:+917978747037" className="text-white">
               +917978747037
             </a>

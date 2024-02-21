@@ -33,11 +33,15 @@ const Featured = () => {
       <div className="text-bgdarkimage font-extrabold text-4xl  ">
         Check now !
       </div>
-      <div className="text-6xl font-bold mt-6 text-gray-500  mb-6 pb-6">
+      <h1 class="my-6 pb-6 text-4xl font-extrabold leading-none tracking-tight text-gray-800 md:text-5xl lg:text-6xl dark:text-white">
+        {" "}
         Our Feature Categories
-      </div>
-      <div className="grid grid-cols-1  md:grid-cols-4 gap-10 md:gap-2">
-        {/* <div className="flex justify-center items-center min-h-screen bg-gray-100"> */}
+      </h1>
+      {/* <div className="text-6xl font-bold mt-6 text-gray-500  mb-6 pb-6">
+        Our Feature Categories
+      </div> */}
+      <div className=" flex flex-wrap justify-center items-center  gap-10 md:gap-2">
+        {/* <div className="flex  min-h-screen bg-gray-100"> */}
         {categories
           .filter((category) => category.id < 5)
           .map((product) => (
@@ -46,7 +50,10 @@ const Featured = () => {
               to={`/category/${product.name.toLowerCase()}`}
               className="  "
             >
-              <CategoryCard category={product} />
+              {" "}
+              <div className=" flex flex-wrap my-5 ">
+                <CategoryCard category={product} />
+              </div>
             </Link>
           ))}
       </div>

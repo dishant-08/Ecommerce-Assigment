@@ -25,13 +25,16 @@ const Service = () => {
   ];
 
   return (
-    <section className="py-18 my-20">
+    <section className="py-18 mt-20">
+      <h1 class="my-6 pb-6 flex justify-center text-4xl font-extrabold leading-none tracking-tight text-gray-800 md:text-5xl lg:text-6xl dark:text-white">
+        Our Services{" "}
+      </h1>
       <div className="container mx-auto">
-        <div className="grid grid-cols-1 place-content-center center md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 place-content-center mx-auto center md:grid-cols-2 gap-4">
           {services.map((service, index) => (
-            <div key={index} className="">
-              <div className=" bg-border p-4 flex justify-center items-center rounded-2xl">
-                <div className="text-8xl  text-white">{service.icon}</div>
+            <div key={index} className=" mx-4 ">
+              <div className=" bg-border p-2 flex justify-center items-center  rounded-2xl">
+                <div className="text-7xl  text-white">{service.icon}</div>
                 <h3 className="text-2xl font-bold text-white mt-2">
                   {service.title}
                 </h3>

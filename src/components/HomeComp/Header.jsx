@@ -105,7 +105,11 @@ const Header = () => {
               </span>
             </div>
           </a>
-          <a className="navbar-burger self-center mr-12 xl:hidden" href="#">
+          <button
+            onClick={handleToggleMenu}
+            className="navbar-burger self-center mr-12 xl:hidden"
+            href="#"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-6 w-6 hover:text-gray-200"
@@ -120,11 +124,48 @@ const Header = () => {
                 d="M4 6h16M4 12h16M4 18h16"
               />
             </svg>
-          </a>
+          </button>
         </nav>
       </section>
+      <div className=" absolute top-[4rem]  right-2 ">
+        {" "}
+        {isMenu && (
+          <div className="xl:hidden rounded-xl bg-gray-900 text-white p-4">
+            <ul className="flex flex-col space-y-4">
+              <li>
+                <a href="#" className="hover:text-gray-200">
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-gray-200">
+                  Category
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-gray-200">
+                  Collections
+                </a>
+              </li>
+              <li>
+                <a href="#footer" className="hover:text-gray-200">
+                  Contact Us
+                </a>
+              </li>
+            </ul>
+          </div>
+        )}
+      </div>
     </div>
   );
 };
 
 export default Header;
+{
+  /* <div className="relative">
+  <FiShoppingCart onClick={() => navigate("/cart")} className=" w-10 h-10   " />
+  <span className=" w-6 h-7 flex justify-center items-center text-sm   absolute rounded-[50%] top-[-30%] left-[70%] bg-btn text-white ">
+    {itemAmount}
+  </span>
+</div>; */
+}
