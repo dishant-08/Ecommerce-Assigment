@@ -4,22 +4,29 @@ import CartCard from "../components/CartComp/CartCard";
 
 const CartPage = () => {
   const { cart, total, setCart } = useCart();
+  useEffect(() => {
+    const storedCartJSON = localStorage.getItem("cartvalue");
+    const localArray = JSON.parse(storedCartJSON);
+    // console.log(localArray.length);
+    // console.log(localArray);
 
-  // useEffect to get cart data from localStorage on component mount
-  // useEffect(() => {
-  //   const storedCart = localStorage.getItem("cartko");
-  //   if (storedCart && storedCart.length !== 0) {
-  //     setCart(JSON.parse(storedCart));
-  //   }
-  // }, [setCart]);
+    if (localArray && localArray.length != 0) {
+      try {
+        const storedCart = JSON.parse(storedCartJSON);
+        setCart(storedCart);
+        console.log(storedCart);
+      } catch (err) {
+        console.warn(`Error parsing JSON from local storage: ${err}`);
+      }
+    }
+  }, [setCart]); // Only run on initial render
 
-  // // useEffect to store cart data in localStorage when cart changes
-  // useEffect(() => {
-  //   localStorage.setItem("cartko", JSON.stringify(cart));
-  // }, [cart]);
+  useEffect(() => {
+    localStorage.setItem("cartvalue", JSON.stringify(cart));
+  }, [cart]); // Run when cart changes
 
-  // // Function to clear the cart and localStorage
   const clearCart = () => {
+    localStorage.setItem("cartvalue", []);
     // localStorage.removeItem("cartko");
     setCart([]);
   };
@@ -32,7 +39,7 @@ const CartPage = () => {
 
   return (
     <div>
-      {cart.length === 0 ? (
+      {cart && cart?.length === 0 ? (
         <div className="flex items-center justify-center min-h-80">
           <p className="ml-2 text-xl font-semibold text-gray-500">
             Your cart is empty.

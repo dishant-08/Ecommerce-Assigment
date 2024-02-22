@@ -4,7 +4,7 @@ import Family from "../../assets/family_imageshopping.jpg";
 // import { Button } from "../styles/Button";
 import bgImage from "../../assets/bgimage.jpg";
 import cartImg from "../../assets/cart.webp";
-import { TypewriterEffect, TypewriterEffectSmooth } from "../TypeWriter";
+
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import AnimatedTextCharacter from "../AnimatedText";
@@ -36,12 +36,14 @@ const HeroSection = ({ mydata }) => {
         alt="Background Image"
       />
       <p className=" text-black flex  flex-col   justify-start items-end p-[10%] h-screen  ">
-        {/* <AnimatedTextCharacter text="Welcome! " /> */}
         <h1 class="mb-4  text-5xl md:text-6xl lg:text-7xl flex flex-col items-center justify-center font-extrabold leading-none tracking-tight text-gray-900  dark:text-white">
-          <span className="block   text-5xl  md:text-5xl lg:text-6xl ">
-            Curated{" "}
-            <span class="text-blue-600   dark:text-blue-500">Collections</span>
-          </span>
+          <div className="flex gap-4  text-5xl  md:text-5xl lg:text-6xl ">
+            <div>Curated </div>
+            {/* <span class="text-blue-600   dark:text-blue-500">Collections</span> */}
+            <div>
+              <AnimatedTextCharacter text="Collections " />
+            </div>
+          </div>
           For the Modern You
         </h1>
         {/* <span> Collections </span> */}

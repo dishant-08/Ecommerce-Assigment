@@ -76,7 +76,7 @@ const AnimatedTextCharacter = ({ text }) => {
     hidden: { opacity: 0 },
     visible: (i = 1) => ({
       opacity: 1,
-      transition: { staggerChildren: 0.03, delayChildren: 0.04 * i },
+      transition: { staggerChildren: 0.3, delayChildren: 0.4 * i },
     }),
   };
 
@@ -112,7 +112,11 @@ const AnimatedTextCharacter = ({ text }) => {
       whileHover={{ scale: 1.01 }} // whileHover triggers the animation infinitely
     >
       {letters.map((letter, index) => (
-        <motion.span variants={child} key={index}>
+        <motion.span
+          variants={child}
+          className="text-blue-600 text-5xl  md:text-5xl lg:text-6xl  dark:text-blue-500"
+          key={index}
+        >
           {letter === " " ? "\u00A0" : letter}
         </motion.span>
       ))}
