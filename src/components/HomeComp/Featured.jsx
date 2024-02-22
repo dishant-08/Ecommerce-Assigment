@@ -9,8 +9,7 @@ const Featured = () => {
       <div className="text-bgdarkimage font-extrabold text-4xl  ">
         Check now !
       </div>
-      <h1 class="my-6 pb-6 text-4xl font-extrabold leading-none tracking-tight text-gray-800 md:text-5xl lg:text-6xl dark:text-white">
-        {" "}
+      <h1 class="my-6 pb-6 text-4xl font-extrabold leading-none tracking-tight text-white md:text-5xl lg:text-6xl dark:text-white">
         Our Feature Categories
       </h1>
 

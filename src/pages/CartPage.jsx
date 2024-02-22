@@ -41,7 +41,7 @@ const CartPage = () => {
     <div>
       {cart && cart?.length === 0 ? (
         <div className="flex items-center justify-center min-h-80">
-          <p className="ml-2 text-xl font-semibold text-gray-500">
+          <p className="ml-2 text-xl font-semibold text-gray-100">
             Your cart is empty.
           </p>
         </div>
@@ -54,7 +54,7 @@ const CartPage = () => {
               </div>
             ))}
           </div>
-          <div className="space-y-1 flex flex-col items-center md:items-end md:text-right">
+          <div className="space-y-1 text-white flex flex-col items-center md:items-end md:text-right">
             <p className="md:mr-10 text-2xl">
               Total amount:
               <span className="font-semibold"> ${total.toFixed(2)} </span>
@@ -67,14 +67,14 @@ const CartPage = () => {
             <button
               type="button"
               onClick={() => clearCart()}
-              className="px-6 py-2 border rounded-md dark:border-violet-400"
+              className="px-6 py-2 border bg-red-200 rounded-md dark:border-violet-400"
             >
               Clear Cart
             </button>
             <button
               type="button"
               onClick={() => handleCheckout()}
-              className="px-6 py-2 border rounded-md dark:bg-violet-400 dark:text-gray-900 dark:border-violet-400"
+              className="px-6 py-2 bg-slate-100 border rounded-md dark:bg-violet-400 dark:text-gray-900 dark:border-violet-400"
             >
               Continue to Checkout
             </button>

@@ -83,7 +83,7 @@ const SideBar = ({ category }) => {
                 key={product.id}
                 className={`flex flex-col my-1 items-center text-left  ${
                   category == product.name.toLowerCase()
-                    ? "font-bold bg-red-500 text-white rounded "
+                    ? "font-bold bg-bgimage text-gray-900 rounded "
                     : ""
                 } `}
                 to={`/category/${product.name.toLowerCase()}`}
@@ -133,7 +133,7 @@ const SideBar = ({ category }) => {
                 });
               }}
               className={`px-4 py-1 text-xl   ${
-                sort.priceAsc ? "bg-red-500 font-semibold text-white" : ""
+                sort.priceAsc ? "bg-bgimage font-semibold text-gray-900" : ""
               }  text-blue-gray-500/80 `}
             >
               Price (Low to High)
@@ -149,7 +149,7 @@ const SideBar = ({ category }) => {
                 });
               }}
               className={`px-4 py-1 text-xl   ${
-                sort.priceDesc ? "bg-red-500 font-semibold text-white" : ""
+                sort.priceDesc ? "bg-bgimage font-semibold text-gray-900" : ""
               }  text-blue-gray-500/80 `}
             >
               Price (High to Low)
@@ -165,7 +165,7 @@ const SideBar = ({ category }) => {
                 });
               }}
               className={`px-4 py-1 text-xl   ${
-                sort.popularAsc ? "bg-red-500  font-semibold text-white" : ""
+                sort.popularAsc ? "bg-bgimage font-semibold text-gray-900" : ""
               }  text-blue-gray-500/80  `}
             >
               Popularity (Low to High)
@@ -181,7 +181,7 @@ const SideBar = ({ category }) => {
                 });
               }}
               className={`px-4 py-1 text-xl   ${
-                sort.popularDesc ? "bg-red-500 font-semibold text-white" : ""
+                sort.popularDesc ? "bg-bgimage font-semibold text-gray-900" : ""
               }  text-blue-gray-500/80 `}
             >
               Popularity (High to Low)

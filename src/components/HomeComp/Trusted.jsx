@@ -8,7 +8,7 @@ const Trusted = () => {
   ];
 
   return (
-    <section className="bg-bg py-32">
+    <section className="bg-bgimage py-32">
       <div className="container mx-auto">
         <h3 className="text-center text-textColor uppercase font-bold text-2xl mb-0">
           Trusted By 1000+ Companies

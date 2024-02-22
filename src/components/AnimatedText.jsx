@@ -46,7 +46,7 @@ const AnimatedTextCharacter = ({ text }) => {
       {letters.map((letter, index) => (
         <motion.span
           variants={child}
-          className="text-blue-600 text-5xl  md:text-5xl lg:text-6xl  dark:text-blue-500"
+          className="text-bgimage py-1 text-5xl  bg-black md:text-5xl lg:text-6xl  dark:text-blue-500"
           key={index}
         >
           {letter === " " ? "\u00A0" : letter}

@@ -105,8 +105,8 @@ const ProductDetailsPage = () => {
                   <nav className="flex" aria-label="Breadcrumb">
                     <ol className="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
                       <li className="inline-flex items-center">
-                        <a
-                          href="#"
+                        <Link
+                          to={"/"}
                           className="inline-flex items-center text-md font-medium text-gray-700 hover:text-blue-600 dark:text-gray-400 dark:hover:text-white"
                         >
                           <svg
@@ -119,7 +119,7 @@ const ProductDetailsPage = () => {
                             <path d="m19.707 9.293-2-2-7-7a1 1 0 0 0-1.414 0l-7 7-2 2a1 1 0 0 0 1.414 1.414L2 10.414V18a2 2 0 0 0 2 2h3a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h3a2 2 0 0 0 2-2v-7.586l.293.293a1 1 0 0 0 1.414-1.414Z" />
                           </svg>
                           Category Page
-                        </a>
+                        </Link>
                       </li>
                       <li>
                         <div className="flex items-center">
@@ -205,7 +205,7 @@ const ProductDetailsPage = () => {
 
                               <div className="flex items-center justify-center p-4  rounded-b">
                                 <button
-                                  className="text-white bg-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                                  className="text-gray-900 bg-bgimage background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                                   type="button"
                                   onClick={(e) => {
                                     e.stopPropagation();

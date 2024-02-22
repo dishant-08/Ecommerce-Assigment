@@ -51,7 +51,7 @@ const Footer = () => {
                 <input
                   type="submit"
                   value="Subscribe"
-                  className="bg-btn text-xl px-4 py-1 text-white cursor-not-allowed"
+                  className="bg-bgimage text-xl px-4 py-1 text-gray-900 cursor-not-allowed"
                   disabled
                 />
               </div>

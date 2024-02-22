@@ -4,11 +4,13 @@ import HeroSection from "../components/HomeComp/HeroSection";
 import Featured from "../components/HomeComp/Featured";
 import Trusted from "../components/HomeComp/Trusted";
 import Service from "../components/HomeComp/Services";
+import HeroImage from "../components/HomeComp/HeroImage";
 
 const Home = () => {
   return (
     <div>
-      <HeroSection />
+      {/* <HeroSection /> */}
+      <HeroImage />
       <Featured />
       <Service />
       <Trusted />

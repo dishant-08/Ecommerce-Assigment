@@ -77,7 +77,7 @@ const Header = () => {
                     onClick={() => navigate("/cart")}
                     className=" w-10 h-10   "
                   />
-                  <span className=" w-6 h-7 flex justify-center items-center text-sm   absolute rounded-[50%] top-[-30%] left-[70%] bg-btn text-white ">
+                  <span className=" w-6 h-7 flex justify-center items-center text-sm   absolute rounded-[50%] top-[-30%] left-[70%] bg-bgimage text-gray-900 ">
                     {itemAmount}
                   </span>
                 </div>
@@ -101,22 +101,6 @@ const Header = () => {
                 </div>
               )}
               {/* Sign In / Register      */}
-              {/* <a className="flex items-center hover:text-gray-200" href="#">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6 hover:text-gray-200"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                </svg>
-              </a> */}
             </div>
           </div>
           {/* Responsive navbar */}
@@ -144,7 +128,7 @@ const Header = () => {
                 onClick={() => navigate("/cart")}
                 className=" w-10 h-10   "
               />
-              <span className=" w-6 h-7 flex justify-center items-center text-sm   absolute rounded-[50%] top-[-30%] left-[50%] bg-btn text-white ">
+              <span className=" w-6 h-7 flex justify-center items-center text-sm   absolute rounded-[50%] top-[-30%] left-[50%] bg-bgimage text-gray-900">
                 {itemAmount}
               </span>
             </div>

@@ -21,7 +21,7 @@ const CartCard = ({ item }) => {
               <h1 className="text-[1rem] font-semibold items-center uppercase  max-w-[240px] text-primary hover:underline">
                 {title}
               </h1>
-              <div className="text-xl  cursor-pointer">
+              <div className="text-xl text-red-300  cursor-pointer">
                 <IoMdClose
                   onClick={() => removeFromCart(id)}
                   className="font-bold text-gray-500 hover:text-red-500 transition"
@@ -29,8 +29,8 @@ const CartCard = ({ item }) => {
               </div>
             </div>
 
-            <div className="flex items-center justify-between gap-x-2 h-[36px]">
-              <div className="flex max-w-[100px] text-gray-900 items-center h-full border font-medium">
+            <div className="flex  items-center justify-between gap-x-2 h-[36px]">
+              <div className="flex rounded-md bg-white max-w-[100px] text-gray-900 items-center h-full border font-medium">
                 <div
                   onClick={() => decreaseAmount(id)}
                   className="flex-1 h-full flex justify-center items-center cursor-pointer"
@@ -48,10 +48,10 @@ const CartCard = ({ item }) => {
                 </div>
               </div>
 
-              <div className=" text-black font-semibold ">
+              <div className=" text-white font-semibold ">
                 $ {price} X {quantity}{" "}
               </div>
-              <div className="font-medium">
+              <div className=" text-white font-medium">
                 $ {parseFloat(price * quantity).toFixed(2)}
               </div>
             </div>
