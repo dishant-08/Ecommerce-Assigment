@@ -205,11 +205,3 @@ const Header = () => {
 };
 
 export default Header;
-{
-  /* <div className="relative">
-  <FiShoppingCart onClick={() => navigate("/cart")} className=" w-10 h-10   " />
-  <span className=" w-6 h-7 flex justify-center items-center text-sm   absolute rounded-[50%] top-[-30%] left-[70%] bg-btn text-white ">
-    {itemAmount}
-  </span>
-</div>; */
-}

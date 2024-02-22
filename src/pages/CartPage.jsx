@@ -59,7 +59,7 @@ const CartPage = () => {
               Total amount:
               <span className="font-semibold"> ${total.toFixed(2)} </span>
             </p>
-            <p className="text-sm md:mr-8 dark:text-gray-400">
+            <p className="text-sm md:mr-8 ">
               Not including taxes and shipping costs
             </p>
           </div>
