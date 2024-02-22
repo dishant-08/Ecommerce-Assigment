@@ -2,6 +2,21 @@
 
 Live Deployed on : https://ecommwebsite08.netlify.app/
 
+# Key Features
+
+- **Responsive Design:**
+  - Implements a responsive design for both mobile and desktop screens to enhance user experience.
+
+- **Persistent Storage:**
+  - Utilizes local storage for seamless and persistent cart and wishlist storage.
+
+- **Google Account Login:**
+  - Allows users to log in using their Google Account for easy access and personalized experiences.
+
+- **Sorting & Filtering:**
+  - Provides sorting and filtering functionalities to enhance product discovery and user convenience.
+
+
 ## Sort & Filter
 
 
