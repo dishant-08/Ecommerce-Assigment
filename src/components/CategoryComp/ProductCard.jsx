@@ -24,7 +24,7 @@ const ProductCard = ({ product }) => {
     <>
       <div
         onClick={() => navigate(`/product/${product.id}`)}
-        className="w-full h-[30rem] relative  max-w-[22rem] bg-white border border-gray-200 rounded-lg shadow  dark:border-gray-700"
+        className="w-full h-[30rem] relative  max-w-[22rem] bg-white border border-gray-200 rounded-lg shadow  "
       >
         <div className="flex justify-center items-center">
           <img
@@ -34,26 +34,26 @@ const ProductCard = ({ product }) => {
           />
         </div>
         <div className="px-5 pb-5">
-          <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
-            {product.title}{" "}
+          <h5 className="text-xl font-semibold tracking-tight text-gray-900 ">
+            {product.title}
           </h5>
 
           <div className="flex items-center mt-2.5 mb-5">
             <div className="flex items-center space-x-1 ">
               {Star(product.rating.rate)}
             </div>
-            <span className="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ms-3">
+            <span className="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded  ms-3">
               {product.rating.rate}
             </span>
           </div>
           <div className="flex absolute bottom-8 items-center justify-between pr-10 w-full">
             {/* <div className=""> */}
-            <span className="text-3xl font-bold text-gray-900 dark:text-white">
+            <span className="text-3xl font-bold text-gray-900 ">
               ${product.price}{" "}
             </span>
             <p
               onClick={handleAddToCartClick}
-              className="text-white bg-gray-900 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              className="text-white bg-gray-900 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:hover:bg-blue-700 dark:focus:ring-blue-800"
             >
               Add to cart
             </p>
