@@ -96,10 +96,18 @@ const CategoryPage = () => {
 
         {!isDesktop && (
           <button
-            className="p-4 text-gray-800 bg-white border border-red-600 rounded-xl"
+            className={`p-3 mx-2  border border-red-600 rounded-xl ${
+              isSidebarOpen
+                ? " bg-red-500 text-white"
+                : "bg-bgimage text-gray-900 "
+            }  `}
             onClick={toggleSidebar}
           >
-            {isSidebarOpen ? "Close Sort Filters" : "Open Sort Filters"}
+            {isSidebarOpen ? (
+              <span> Close Sort Filters </span>
+            ) : (
+              <span> Open Sort Filters </span>
+            )}
           </button>
         )}
       </div>
@@ -128,7 +136,7 @@ const CategoryPage = () => {
           <SideBar category={categoryId} />
         </div>
 
-        <div className="col-span-8 md:col-span-10   md:flex-none mobile border p-10 ">
+        <div className="col-span-8 md:col-span-10   md:flex-none mobile border pt-10 pb-10 px-10 ">
           <div className="flex flex-wrap gap-6">{Products}</div>
         </div>
       </div>

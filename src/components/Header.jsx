@@ -161,25 +161,38 @@ const Header = () => {
           <div className="xl:hidden rounded-xl bg-gray-900 text-white p-4">
             <ul className="flex flex-col space-y-4">
               <li>
-                <Link to="/" className="hover:text-gray-200">
+                <Link
+                  to="/"
+                  onClick={handleToggleMenu}
+                  className="hover:text-gray-200"
+                >
                   Home
                 </Link>
               </li>
               <li>
-                <a href="#category" className="hover:text-gray-200">
+                <a
+                  href="#category"
+                  onClick={handleToggleMenu}
+                  className="hover:text-gray-200"
+                >
                   Category
                 </a>
               </li>
               <li>
                 <Link
                   to="/category/electronics"
+                  onClick={handleToggleMenu}
                   className="hover:text-gray-200"
                 >
                   Collections
                 </Link>
               </li>
               <li>
-                <a href="#footer" className="hover:text-gray-200">
+                <a
+                  href="#footer"
+                  onClick={handleToggleMenu}
+                  className="hover:text-gray-200"
+                >
                   Contact Us
                 </a>
               </li>

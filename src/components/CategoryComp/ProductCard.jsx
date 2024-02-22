@@ -24,7 +24,7 @@ const ProductCard = ({ product }) => {
     <>
       <div
         onClick={() => navigate(`/product/${product.id}`)}
-        className="w-full h-[30rem] relative  max-w-[22rem] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+        className="w-full h-[30rem] relative  max-w-[22rem] bg-white border border-gray-200 rounded-lg shadow  dark:border-gray-700"
       >
         <div className="flex justify-center items-center">
           <img
