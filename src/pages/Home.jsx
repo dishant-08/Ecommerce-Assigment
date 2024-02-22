@@ -1,6 +1,4 @@
-// src/pages/Home.js
 import React from "react";
-// import CategoryList from "../components/HomeComp/CategoryList";
 
 import HeroSection from "../components/HomeComp/HeroSection";
 import Featured from "../components/HomeComp/Featured";
