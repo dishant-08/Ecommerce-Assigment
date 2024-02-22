@@ -17,7 +17,11 @@ https://github.com/dishant-08/Ecommerce-Assigment/assets/60565337/5dca3662-50c8-
 #### New Version with Mobile & Desktop Responsive
 
 
-https://github.com/dishant-08/Ecommerce-Assigment/assets/60565337/d515e04a-ab6e-4453-9e5d-94885a421506
+
+https://github.com/dishant-08/Ecommerce-Assigment/assets/60565337/2ca5259f-bce9-439d-9abd-c22b179255b5
+
+
+
 
 
 
@@ -98,9 +102,13 @@ This project is a React-based e-commerce website with multiple components for di
 ![image](https://github.com/dishant-08/Ecommerce-Assigment/assets/60565337/ac872408-1b69-49ec-8147-24d4e99f8f85)
 
 ### Mobile
-![image](https://github.com/dishant-08/Ecommerce-Assigment/assets/60565337/987f767d-8292-4af8-bf17-84776a3ae10a)
+![image](https://github.com/dishant-08/Ecommerce-Assigment/assets/60565337/535e5596-dc64-416c-b140-f040e999c659)
 
-![image](https://github.com/dishant-08/Ecommerce-Assigment/assets/60565337/0c5fff35-ccaf-4415-801d-cf3606417fc0)
+![image](https://github.com/dishant-08/Ecommerce-Assigment/assets/60565337/f9fa769f-ba94-4bff-87d1-375ad9395aa0)
+
+
+![image](https://github.com/dishant-08/Ecommerce-Assigment/assets/60565337/78c38a3b-1288-494b-a660-356dc682ae8b)
+
 
 
 
