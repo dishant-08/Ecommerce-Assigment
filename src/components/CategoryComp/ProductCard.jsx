@@ -15,7 +15,7 @@ const ProductCard = ({ product }) => {
     <>
       <div
         onClick={() => navigate(`/product/${product.id}`)}
-        className="w-full h-[30rem]   max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+        className="w-full h-[30rem] relative  max-w-[22rem] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
       >
         <div className="flex justify-center items-center">
           <img
@@ -82,7 +82,8 @@ const ProductCard = ({ product }) => {
               {product.rating.rate}
             </span>
           </div>
-          <div className="flex items-center justify-between">
+          <div className="flex absolute bottom-8 items-center justify-between pr-10 w-full">
+            {/* <div className=""> */}
             <span className="text-3xl font-bold text-gray-900 dark:text-white">
               ${product.price}{" "}
             </span>
@@ -92,6 +93,7 @@ const ProductCard = ({ product }) => {
             >
               Add to cart
             </p>
+            {/* </div> */}
           </div>
         </div>
       </div>

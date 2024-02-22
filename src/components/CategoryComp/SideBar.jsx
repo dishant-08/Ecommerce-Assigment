@@ -12,7 +12,7 @@ export const AccordionItem = ({ title, content, index }) => {
   const toggleAccordion = () => {
     // setIsOpen(!isOpen);
     setIsOpen(!isOpen);
-    console.log("Is Open:", isOpen);
+    // console.log("Is Open:", isOpen);
   };
 
   return (
@@ -40,7 +40,7 @@ export const AccordionItem = ({ title, content, index }) => {
   );
 };
 
-const SideBar = () => {
+const SideBar = ({ category }) => {
   const {
     products,
     setProducts,
@@ -54,13 +54,14 @@ const SideBar = () => {
     setSort,
   } = useFilter();
   const [slider, setSlider] = useState();
+  // console.log(category);
 
   const priceOptions = ["300", "200", "100"];
 
   const [selectedPrice, setSelectedPrice] = useState(null);
   // console.log(selectedPrice);
   const [selectedRating, setSelectedRating] = useState(null);
-  console.log(filters);
+  // console.log(filters);
   // const [selectedPrice, setSelectedPrice] = useState(null);
 
   const handleRatingChange = (rating) => {
@@ -73,7 +74,7 @@ const SideBar = () => {
     setSelectedPrice(price);
     // Add any additional logic you need here
   };
-  console.log(slider);
+  // console.log(slider);
   return (
     <div>
       <AccordionItem
@@ -83,7 +84,11 @@ const SideBar = () => {
             {categories.map((product) => (
               <Link
                 key={product.id}
-                className="flex flex-col items-center text-left "
+                className={`flex flex-col my-1 items-center text-left  ${
+                  category == product.name.toLowerCase()
+                    ? "font-bold bg-red-500 text-white rounded "
+                    : ""
+                } `}
                 to={`/category/${product.name.toLowerCase()}`}
               >
                 {product.name}
@@ -147,7 +152,7 @@ const SideBar = () => {
                 });
               }}
               className={`px-4 py-1 text-xl   ${
-                sort.priceAsc ? "bg-red-500 font-semibold text-white" : ""
+                sort.priceDesc ? "bg-red-500 font-semibold text-white" : ""
               }  text-blue-gray-500/80 `}
             >
               Price (High to Low)
@@ -163,7 +168,7 @@ const SideBar = () => {
                 });
               }}
               className={`px-4 py-1 text-xl   ${
-                sort.priceAsc ? "bg-red-500  font-semibold text-white" : ""
+                sort.popularAsc ? "bg-red-500  font-semibold text-white" : ""
               }  text-blue-gray-500/80  `}
             >
               Popularity (Low to High)
@@ -179,7 +184,7 @@ const SideBar = () => {
                 });
               }}
               className={`px-4 py-1 text-xl   ${
-                sort.priceAsc ? "bg-red-500 font-semibold text-white" : ""
+                sort.popularDesc ? "bg-red-500 font-semibold text-white" : ""
               }  text-blue-gray-500/80 `}
             >
               Popularity (High to Low)
@@ -193,13 +198,17 @@ const SideBar = () => {
         content={
           <div className="flex flex-col items-center p-1 text-xl">
             {priceOptions.map((price, index) => (
-              <label className=" my-0.5 " key={index}>
+              <label
+                className="flex items-center my-0.5 rounded border p-2"
+                key={index}
+              >
                 <input
                   type="radio"
                   name="price"
                   value={price}
                   checked={filters.price === price}
                   onChange={() => handlePriceChange(price)}
+                  className="mr-2" // Add margin to separate the radio button and label
                 />
                 Under ${price}
               </label>

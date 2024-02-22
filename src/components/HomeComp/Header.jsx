@@ -1,13 +1,18 @@
 import React, { useState } from "react";
 import Logo from "../../assets/shopping-cart.png";
 import { FiShoppingCart } from "react-icons/fi";
-import { Navigate, useNavigate } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import { useCart } from "../../context/ProductContext";
+import { Button } from "../Button";
+import { useAuth0 } from "@auth0/auth0-react";
 // import { CgMenu, CgClose } from "react-icons/cg";
 
 const Header = () => {
   const [isMenu, setMenuOpen] = useState(false);
+  const { user, logout, isAuthenticated, isLoading } = useAuth0();
+  const { loginWithRedirect } = useAuth0();
   const navigate = useNavigate();
+  // console.log(user);
   const { itemAmount } = useCart();
   const handleToggleMenu = () => {
     setMenuOpen(!isMenu);
@@ -25,29 +30,32 @@ const Header = () => {
             {/* Nav Links */}
             <ul className="hidden md:flex px-4 mx-auto font-semibold font-heading space-x-12">
               <li>
-                <a className="hover:text-gray-200" href="#">
+                <Link to="/" className="hover:text-gray-200">
                   Home
-                </a>
+                </Link>
               </li>
               <li>
-                <a className="hover:text-gray-200" href="#">
+                <a href="#category" className="hover:text-gray-200">
                   Category
                 </a>
               </li>
               <li>
-                <a className="hover:text-gray-200" href="#">
+                <Link
+                  to="/category/electronics"
+                  className="hover:text-gray-200"
+                >
                   Collections
-                </a>
+                </Link>
               </li>
               <li>
-                <a className="hover:text-gray-200" href="#footer">
+                <a href="#footer" className="hover:text-gray-200">
                   Contact Us
                 </a>
               </li>
             </ul>
             {/* Header Icons */}
             <div className="hidden xl:flex items-center space-x-5 ">
-              <a className="hover:text-gray-200" href="#">
+              <a className=" hidden hover:text-gray-200" href="#">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-6 w-6"
@@ -74,8 +82,26 @@ const Header = () => {
                   </span>
                 </div>
               </a>
+              {!isAuthenticated ? (
+                <Button onClick={() => loginWithRedirect()}>Login</Button>
+              ) : (
+                <div className="flex gap-2 ">
+                  <span className="flex text-xl  ">
+                    Hello {user?.given_name}{" "}
+                  </span>
+                  <Button
+                    onClick={() =>
+                      logout({
+                        logoutParams: { returnTo: window.location.origin },
+                      })
+                    }
+                  >
+                    LogOut
+                  </Button>
+                </div>
+              )}
               {/* Sign In / Register      */}
-              <a className="flex items-center hover:text-gray-200" href="#">
+              {/* <a className="flex items-center hover:text-gray-200" href="#">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-6 w-6 hover:text-gray-200"
@@ -90,24 +116,42 @@ const Header = () => {
                     d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"
                   />
                 </svg>
-              </a>
+              </a> */}
             </div>
           </div>
           {/* Responsive navbar */}
-          <a className="xl:hidden flex mr-6 items-center" href="#">
+          <div className="xl:hidden flex gap-2 mr-2 items-center">
+            {!isAuthenticated ? (
+              <Button onClick={() => loginWithRedirect()}>Login</Button>
+            ) : (
+              <div className="flex gap-1 ">
+                <span className="flex text-xl  ">
+                  Hello {user?.given_name}{" "}
+                </span>
+                <Button
+                  onClick={() =>
+                    logout({
+                      logoutParams: { returnTo: window.location.origin },
+                    })
+                  }
+                >
+                  LogOut
+                </Button>
+              </div>
+            )}
             <div className="relative">
               <FiShoppingCart
                 onClick={() => navigate("/cart")}
                 className=" w-10 h-10   "
               />
-              <span className=" w-6 h-7 flex justify-center items-center text-sm   absolute rounded-[50%] top-[-30%] left-[70%] bg-btn text-white ">
+              <span className=" w-6 h-7 flex justify-center items-center text-sm   absolute rounded-[50%] top-[-30%] left-[50%] bg-btn text-white ">
                 {itemAmount}
               </span>
             </div>
-          </a>
+          </div>
           <button
             onClick={handleToggleMenu}
-            className="navbar-burger self-center mr-12 xl:hidden"
+            className="navbar-burger self-center mr-4 xl:hidden"
             href="#"
           >
             <svg
@@ -133,19 +177,22 @@ const Header = () => {
           <div className="xl:hidden rounded-xl bg-gray-900 text-white p-4">
             <ul className="flex flex-col space-y-4">
               <li>
-                <a href="#" className="hover:text-gray-200">
+                <Link to="/" className="hover:text-gray-200">
                   Home
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-gray-200">
+                <a href="#category" className="hover:text-gray-200">
                   Category
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-gray-200">
+                <Link
+                  to="/category/electronics"
+                  className="hover:text-gray-200"
+                >
                   Collections
-                </a>
+                </Link>
               </li>
               <li>
                 <a href="#footer" className="hover:text-gray-200">

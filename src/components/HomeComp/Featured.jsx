@@ -29,7 +29,7 @@ const Featured = () => {
   //   }
 
   return (
-    <section className="  text-4xl p-12 my-2 mx-auto">
+    <section id="category" className="  text-4xl p-12 my-2 mx-auto">
       <div className="text-bgdarkimage font-extrabold text-4xl  ">
         Check now !
       </div>

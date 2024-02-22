@@ -9,7 +9,7 @@ import { useFilter } from "../context/FilterContext";
 
 const CategoryPage = () => {
   const { categoryId } = useParams();
-  const { products, setProducts, filters, setFilters, applyFilters } =
+  const { products, setProducts, filters, setFilters, applyFilters, setSort } =
     useFilter();
 
   const isDesktop = useMediaQuery({ minWidth: 768 });
@@ -39,10 +39,65 @@ const CategoryPage = () => {
   return (
     <div>
       <div className="flex p-2 justify-between">
-        <div>
+        {/* <div>
           <h2>Category Page</h2>
           <h2>{categoryId}</h2>
-        </div>
+        </div> */}
+
+        <nav className="flex" aria-label="Breadcrumb">
+          <ol className="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
+            <li className="inline-flex items-center">
+              <a
+                href="#"
+                className="inline-flex items-center text-md font-medium text-gray-700 hover:text-blue-600 dark:text-gray-400 dark:hover:text-white"
+              >
+                <svg
+                  className="w-3 h-3 me-2.5"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="m19.707 9.293-2-2-7-7a1 1 0 0 0-1.414 0l-7 7-2 2a1 1 0 0 0 1.414 1.414L2 10.414V18a2 2 0 0 0 2 2h3a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h3a2 2 0 0 0 2-2v-7.586l.293.293a1 1 0 0 0 1.414-1.414Z" />
+                </svg>
+                Category Page
+              </a>
+            </li>
+            <li>
+              <div className="flex items-center">
+                <svg
+                  className="rtl:rotate-180 w-3 h-3 text-gray-400 mx-1"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 6 10"
+                >
+                  <path
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="m1 9 4-4-4-4"
+                  />
+                </svg>
+                <a
+                  href="#"
+                  className="ms-1 text-md capitalize font-medium text-gray-700 hover:text-blue-600 md:ms-2 dark:text-gray-400 dark:hover:text-white"
+                >
+                  {categoryId}
+                </a>
+              </div>
+            </li>
+            {/* <li aria-current="page">
+      <div className="flex items-center">
+        <svg className="rtl:rotate-180 w-3 h-3 text-gray-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+          <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="m1 9 4-4-4-4" />
+        </svg>
+        <span className="ms-1 text-sm font-medium text-gray-500 md:ms-2 dark:text-gray-400">Flowbite</span>
+      </div>
+    </li> */}
+          </ol>
+        </nav>
 
         {!isDesktop && (
           <button
@@ -61,14 +116,24 @@ const CategoryPage = () => {
           }   bg-white gap-5 border ${isSidebarOpen ? "block" : "hidden"}`}
         >
           <div className="flex justify-center items-center ">
-            <div onClick={() => setFilters({ rating: null, price: null })}>
+            <div
+              onClick={() => {
+                setFilters({ rating: null, price: null });
+                setSort({
+                  priceAsc: false,
+                  priceDesc: false,
+                  popularAsc: false,
+                  popularDesc: false,
+                });
+              }}
+            >
               <Button>Clear Filters</Button>
             </div>
           </div>
-          <SideBar />
+          <SideBar category={categoryId} />
         </div>
 
-        <div className="col-span-8 md:col-span-10 flex justify-center w-screen border p-10 ">
+        <div className="col-span-8 md:col-span-10   md:flex-none mobile border p-10 ">
           <div className="flex flex-wrap gap-6">{Products}</div>
         </div>
       </div>

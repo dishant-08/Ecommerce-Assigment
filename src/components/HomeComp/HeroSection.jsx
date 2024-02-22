@@ -35,13 +35,21 @@ const HeroSection = ({ mydata }) => {
         src={bgImage}
         alt="Background Image"
       />
-      <p className=" text-black flex justify-end items-start p-[10%] h-screen  ">
-        <AnimatedTextCharacter text="Welcome! to Ecommerce Project" />
+      <p className=" text-black flex  flex-col   justify-start items-end p-[10%] h-screen  ">
+        {/* <AnimatedTextCharacter text="Welcome! " /> */}
+        <h1 class="mb-4  text-5xl md:text-6xl lg:text-7xl flex flex-col items-center justify-center font-extrabold leading-none tracking-tight text-gray-900  dark:text-white">
+          <span className="block   text-5xl  md:text-5xl lg:text-6xl ">
+            Curated{" "}
+            <span class="text-blue-600   dark:text-blue-500">Collections</span>
+          </span>
+          For the Modern You
+        </h1>
+        {/* <span> Collections </span> */}
       </p>
 
       <div>
         <img
-          className=" w-[20rem] md:w-[30rem]  h-[20rem] md:h-[30rem] absolute right-0 bottom-20  cart-image "
+          className=" w-[20rem] md:w-[30rem]  h-[20rem] md:h-[30rem] absolute right-0 bottom-16   cart-image "
           src={cartImg}
           alt="Cart"
         />

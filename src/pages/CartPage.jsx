@@ -6,21 +6,21 @@ const CartPage = () => {
   const { cart, total, setCart } = useCart();
 
   // useEffect to get cart data from localStorage on component mount
-  useEffect(() => {
-    const storedCart = localStorage.getItem("cartko");
-    if (storedCart && storedCart.length !== 0) {
-      setCart(JSON.parse(storedCart));
-    }
-  }, [setCart]);
+  // useEffect(() => {
+  //   const storedCart = localStorage.getItem("cartko");
+  //   if (storedCart && storedCart.length !== 0) {
+  //     setCart(JSON.parse(storedCart));
+  //   }
+  // }, [setCart]);
 
-  // useEffect to store cart data in localStorage when cart changes
-  useEffect(() => {
-    localStorage.setItem("cartko", JSON.stringify(cart));
-  }, [cart]);
+  // // useEffect to store cart data in localStorage when cart changes
+  // useEffect(() => {
+  //   localStorage.setItem("cartko", JSON.stringify(cart));
+  // }, [cart]);
 
-  // Function to clear the cart and localStorage
+  // // Function to clear the cart and localStorage
   const clearCart = () => {
-    localStorage.removeItem("cartko");
+    // localStorage.removeItem("cartko");
     setCart([]);
   };
 
