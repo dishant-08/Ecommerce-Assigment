@@ -1,0 +1,47 @@
+[33mcommit 56ac6d99fe7b001edc8ef759907f8b637cca76a8[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: Dishant Sahu <dishant.sahu07@gmail.com>
+Date:   Thu Feb 22 14:45:24 2024 +0530
+
+    fixed: hero and font
+
+[33mcommit 19421944182c8df7155c9f9bad4edd8d7f99c379[m
+Author: Dishant Sahu <dishant.sahu07@gmail.com>
+Date:   Thu Feb 22 13:31:44 2024 +0530
+
+    fixed: local & improve cart
+
+[33mcommit c78ca77207c7ea2fd4b42cc1c277b48e8a5e0a89[m
+Author: Dishant Sahu <dishant.sahu07@gmail.com>
+Date:   Thu Feb 22 12:01:51 2024 +0530
+
+    feat: improve ui & fixed cart
+
+[33mcommit 81c375bb0b78806bc5794ec5237ec280f47aaf91[m
+Author: Dishant Sahu <dishant.sahu07@gmail.com>
+Date:   Thu Feb 22 02:53:41 2024 +0530
+
+    feat: local storage & mobile res
+
+[33mcommit fd73e0454b751f4709a563372872093f8fb86f2c[m
+Author: Dishant Sahu <dishant.sahu07@gmail.com>
+Date:   Wed Feb 21 22:09:26 2024 +0530
+
+    feat: filter section
+
+[33mcommit e4afb46aba913939f5122329acace4bee206da6f[m
+Author: Dishant Sahu <dishant.sahu07@gmail.com>
+Date:   Wed Feb 21 11:54:55 2024 +0530
+
+    feat: product overview page  & updated hero
+
+[33mcommit 2be3241df52d863482857e31e6dadb4e1a1214b6[m
+Author: Dishant Sahu <dishant.sahu07@gmail.com>
+Date:   Tue Feb 20 11:24:52 2024 +0530
+
+    Feat :  Cart logic
+
+[33mcommit c4e11b7fa874cc2c4003c0d5ccf7fdc9cd4c57c6[m
+Author: Dishant Sahu <dishant.sahu07@gmail.com>
+Date:   Mon Feb 19 22:45:33 2024 +0530
+
+    Intial commit

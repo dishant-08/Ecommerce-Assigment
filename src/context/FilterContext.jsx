@@ -28,7 +28,6 @@ const FilterProvider = ({ children }) => {
   const applyFilters = (categoryProducts, filters) => {
     // Apply existing filters to the products
     let filteredProducts = [...categoryProducts];
-    console.log(filteredProducts);
 
     // Apply rating filter
     if (filters.rating !== null) {

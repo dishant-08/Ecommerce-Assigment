@@ -13,7 +13,7 @@ const CartPage = () => {
     if (localArray && localArray.length != 0) {
       try {
         const storedCart = JSON.parse(storedCartJSON);
-        setCart(storedCart);
+        setCart([...storedCart, ...cart]);
         console.log(storedCart);
       } catch (err) {
         console.warn(`Error parsing JSON from local storage: ${err}`);

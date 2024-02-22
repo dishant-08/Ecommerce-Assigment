@@ -1,5 +1,5 @@
 import React from "react";
-import { FaGithub, FaInstagram, FaYoutube } from "react-icons/fa";
+import { FaGithub, FaTwitter, FaLinkedin } from "react-icons/fa";
 import { Button } from "./Button";
 
 const SocialLink = ({ href, icon }) => (
@@ -62,15 +62,15 @@ const Footer = () => {
             <h3 className="text-xl mb-4">Follow</h3>
             <div className="flex justify-center gap-2">
               <SocialLink
-                href="https://instagram.com/"
-                icon={<FaInstagram className="text-white text-xl" />}
+                href="https://twitter.com/sahu_dishant"
+                icon={<FaTwitter className="text-white text-xl" />}
               />
               <SocialLink
-                href="https://youtube.com/"
-                icon={<FaYoutube className="text-white text-xl" />}
+                href="https://www.linkedin.com/in/dishant-sahu-b18240244/"
+                icon={<FaLinkedin className="text-white text-xl" />}
               />
               <SocialLink
-                href="https://github.com/"
+                href="https://github.com/dishant-08"
                 icon={<FaGithub className="text-white text-xl" />}
               />
             </div>
@@ -86,14 +86,14 @@ const Footer = () => {
 
         {/* Bottom footer */}
         <div className=" ">
-          <hr className="mb-2 border-t-2 border-gray-400" />
+          <hr className="mb-1 border-t-2 border-gray-400" />
           <div className="flex justify-between px-10 items-center gap-8">
             <p className="text-xl">
               @{currentYear} E-Store all right reserved.
             </p>
             <div className="flex">
-              <FooterLink title="Privacy policy" />
-              <FooterLink title="Terms And Conditions" />
+              <FooterLink title="Privacy policy •" />
+              <FooterLink title=" Terms And Conditions" />
             </div>
           </div>
         </div>

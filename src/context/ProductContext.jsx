@@ -18,7 +18,6 @@ const CartProvider = ({ children }) => {
   }, [cart]);
 
   const addToCart = (product, id) => {
-    // console.log(product);
     const newItem = { ...product, quantity: 1 };
     const cartItem = cart.find((item) => {
       return item.id === id;
@@ -71,11 +70,6 @@ const CartProvider = ({ children }) => {
       }
     }
   };
-  const summAmount = () =>
-    cart.reduce((first, sec) => {
-      return first.quantity + sec.quantity;
-    }, 0);
-  //   console.log(summAmount());
 
   useEffect(() => {
     const total = cart.reduce((accumulator, currentItem) => {

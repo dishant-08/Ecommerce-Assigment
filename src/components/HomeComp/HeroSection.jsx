@@ -9,7 +9,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import AnimatedTextCharacter from "../AnimatedText";
 
-const HeroSection = ({ mydata }) => {
+const HeroSection = () => {
   // const { name } = mydata;
 
   useEffect(() => {

@@ -54,15 +54,12 @@ const SideBar = ({ category }) => {
     setSort,
   } = useFilter();
   const [slider, setSlider] = useState();
-  // console.log(category);
 
   const priceOptions = ["300", "200", "100"];
 
   const [selectedPrice, setSelectedPrice] = useState(null);
-  // console.log(selectedPrice);
+
   const [selectedRating, setSelectedRating] = useState(null);
-  // console.log(filters);
-  // const [selectedPrice, setSelectedPrice] = useState(null);
 
   const handleRatingChange = (rating) => {
     setFilters({ ...filters, rating });
