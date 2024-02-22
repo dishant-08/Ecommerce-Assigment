@@ -2,11 +2,27 @@
 
 Live Deployed on : https://ecommwebsite08.netlify.app/
 
+## Sort & Filter
+
+
+
+https://github.com/dishant-08/Ecommerce-Assigment/assets/60565337/5dca3662-50c8-41eb-a548-686cd92ca285
+
+
+
 ## Bonus Task
 
 ### Animations
 
+#### New Version with Mobile & Desktop Responsive
 
+
+https://github.com/dishant-08/Ecommerce-Assigment/assets/60565337/d515e04a-ab6e-4453-9e5d-94885a421506
+
+
+
+
+#### Old Version
 https://github.com/dishant-08/Ecommerce-Assigment/assets/60565337/bff25c92-83ca-40ea-b2ae-0fae4ec1b412
 
 ### Local Storage Implementaion
@@ -18,7 +34,10 @@ https://github.com/dishant-08/Ecommerce-Assigment/assets/60565337/d2d48d28-e65a-
 ### Mobile & Desktop Responsive
 
 
-https://github.com/dishant-08/Ecommerce-Assigment/assets/60565337/36f07d51-6684-4076-8bea-d3ff1163dda1
+
+https://github.com/dishant-08/Ecommerce-Assigment/assets/60565337/24c1e6a8-ed73-4562-ab25-59d5306509ac
+
+
 
 ### Login 
 
@@ -30,7 +49,11 @@ https://github.com/dishant-08/Ecommerce-Assigment/assets/60565337/aa0bc3cb-9295-
 
 
 
-https://github.com/dishant-08/Ecommerce-Assigment/assets/60565337/10039ae0-5c5c-4aff-9834-7a7887e0fd35
+https://github.com/dishant-08/Ecommerce-Assigment/assets/60565337/5d3edfb9-b8d9-4a13-9b3e-eeb373cf38c5
+
+
+
+
 
 
 
