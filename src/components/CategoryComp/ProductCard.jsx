@@ -34,7 +34,7 @@ const ProductCard = ({ product }) => {
           />
         </div>
         <div className="px-5 pb-5">
-          <h5 className="text-xl font-semibold tracking-tight text-gray-900 ">
+          <h5 className="text-xl font-semibold tracking-tight text-black ">
             {product.title}
           </h5>
 
@@ -48,7 +48,7 @@ const ProductCard = ({ product }) => {
           </div>
           <div className="flex absolute bottom-8 items-center justify-between pr-10 w-full">
             {/* <div className=""> */}
-            <span className="text-3xl font-bold text-gray-900 ">
+            <span className="text-3xl font-bold text-black ">
               ${product.price}{" "}
             </span>
             <p
