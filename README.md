@@ -1,5 +1,21 @@
 # Ecommerce Website
 
+
+## Bonus Task
+
+### Animations
+
+
+https://github.com/dishant-08/Ecommerce-Assigment/assets/60565337/bff25c92-83ca-40ea-b2ae-0fae4ec1b412
+
+### Local Storage Implementaion
+
+
+https://github.com/dishant-08/Ecommerce-Assigment/assets/60565337/d2d48d28-e65a-488a-a9a1-b596428a2f4f
+
+
+
+
 ## Overview
 
 This project is a React-based e-commerce website with multiple components for different pages.
@@ -24,6 +40,21 @@ This project is a React-based e-commerce website with multiple components for di
 - Located at `src/pages/CartPage.js`
 - Shows the items added to the cart.
 - Provides functionalities for clearing the cart and persistent storage.
+
+## Screenshots
+
+![image](https://github.com/dishant-08/Ecommerce-Assigment/assets/60565337/07c8dcb3-ceec-413f-812d-34de879525aa)
+
+![image](https://github.com/dishant-08/Ecommerce-Assigment/assets/60565337/ac872408-1b69-49ec-8147-24d4e99f8f85)
+
+### Mobile
+![image](https://github.com/dishant-08/Ecommerce-Assigment/assets/60565337/987f767d-8292-4af8-bf17-84776a3ae10a)
+
+![image](https://github.com/dishant-08/Ecommerce-Assigment/assets/60565337/0c5fff35-ccaf-4415-801d-cf3606417fc0)
+
+
+
+
 
 ## Usage
 
