@@ -94,6 +94,8 @@ This project is a React-based e-commerce website with multiple components for di
 
 ### New Version
 ![image](https://github.com/dishant-08/Ecommerce-Assigment/assets/60565337/fa689756-dc8a-4f80-b421-13959e2e981b)
+![image](https://github.com/dishant-08/Ecommerce-Assigment/assets/60565337/cdb7615e-2bee-4148-b0a9-91669854a79f)
+
 
 
 ### Old Version
