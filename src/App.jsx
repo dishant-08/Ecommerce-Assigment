@@ -12,11 +12,12 @@ import Home from "./pages/Home";
 import CategoryPage from "./pages/CategoryPage";
 import ProductDetailsPage from "./pages/ProductDetailsPage";
 import CartPage from "./pages/CartPage";
-import Header from "./components/HomeComp/Header";
+
 import Footer from "./components/Footer";
 import CartProvider from "./context/ProductContext";
 import bgImage from "../src/assets/bgimage.jpg";
 import FilterProvider from "./context/FilterContext";
+import Header from "./components/Header";
 
 // const router = createBrowserRouter([
 //   {

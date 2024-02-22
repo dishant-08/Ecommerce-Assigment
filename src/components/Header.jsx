@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import Logo from "../../assets/shopping-cart.png";
+import Logo from "../assets/shopping-cart.png";
 import { FiShoppingCart } from "react-icons/fi";
 import { Link, Navigate, useNavigate } from "react-router-dom";
-import { useCart } from "../../context/ProductContext";
-import { Button } from "../Button";
+import { useCart } from "../context/ProductContext";
+import { Button } from "./Button";
 import { useAuth0 } from "@auth0/auth0-react";
 // import { CgMenu, CgClose } from "react-icons/cg";
 
@@ -41,7 +41,7 @@ const Header = () => {
               </li>
               <li>
                 <Link
-                  to="/category/electronics"
+                  to="/category/women's%20clothing"
                   className="hover:text-gray-200"
                 >
                   Collections
