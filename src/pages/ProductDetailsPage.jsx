@@ -26,8 +26,6 @@ const ProductDetailsPage = () => {
       100
   );
 
-  console.log(product[0]);
-
   const handleAddToCartClick = () => {
     if (isAuthenticated) {
       addToCart(product[0], product[0].id);
