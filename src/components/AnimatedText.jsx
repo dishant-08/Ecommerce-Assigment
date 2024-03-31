@@ -6,10 +6,10 @@ const AnimatedTextCharacter = ({ text }) => {
 
   const container = {
     hidden: { opacity: 0 },
-    visible: (i = 1) => ({
+    visible: {
       opacity: 1,
-      transition: { staggerChildren: 0.1, delayChildren: 0.1 * i },
-    }),
+      transition: { staggerChildren: 0.1, delayChildren: 0.1 },
+    },
   };
 
   const child = {
@@ -38,9 +38,9 @@ const AnimatedTextCharacter = ({ text }) => {
   return (
     <motion.div
       style={{ overflow: "hidden", display: "flex", fontSize: "2rem" }}
-      variants={container}
       initial="hidden"
       animate="visible"
+      variants={container}
       whileHover={{ scale: 1.01 }} // whileHover triggers the animation infinitely
     >
       {letters.map((letter, index) => (
